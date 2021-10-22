@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  docs:
+    image: jekyll/jekyll
+    command: >
+        jekyll serve --trace --force_polling --livereload"
+    volumes:
+      - type: bind
+        source: "../"
+        target: "/srv/jekyll"
+    ports:
+      - '4000:4000'
+      - '35729:35729'
