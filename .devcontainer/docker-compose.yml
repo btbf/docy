@@ -4,6 +4,7 @@ services:
   docs:
     image: jekyll/jekyll
     command: >
+        bash -c "ls &&
         jekyll serve --trace --force_polling --livereload"
     volumes:
       - type: bind
